@@ -1,0 +1,122 @@
+#bannnner{
+    background-image: url("/images/banner.jpg") !important;
+    width: 50%;
+    background-repeat: no-repeat;
+/*
+    background-position: right top;
+    background-attachment: fixed;
+*/
+}
+
+.nospace {
+    margin: 0;
+    margin-top: 35px;
+    padding: 0;
+    list-style: none;
+}
+
+.contact.linklist li{
+    position: relative;
+    padding-left: 40px;
+}
+
+.contact.linklist li address{
+        font-style: normal !important;
+}
+
+.contact li i {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    font-size: 20px;
+    text-align: center;
+    
+
+}
+
+/*Section -2 CSS-Gallery*/
+
+.design-bg-color {
+    padding-top: 50px;
+    position: relative;
+    width: 100%;
+}
+
+    .design-bg-color:before {
+        content: '';
+        background-color: #d51d5d;
+        width: 63%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        z-index: -1;
+    }
+
+.designer-bg {
+    z-index: -1;
+    width: 89%;
+    height: 384px;
+    top: -434px;
+    position: relative;
+    bottom: -135px;
+    float: right;
+    left: 0px;
+    background-image: url(/images/designer-bg.png);
+    background-position: bottom left;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+.grid {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 15px 0px 0px 5px;
+}
+
+.grid-item {
+    width: 25%;
+    float: left;
+    padding: 0 15px 30px;
+}
+
+.grid-item a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+
+
+/*Zoom CSS Start*/
+
+.image-source-link {
+	color: #98C3D1;
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+	/* ideally, transition speed should match zoom duration */
+	-webkit-transition: all 0.3s ease-out; 
+	-moz-transition: all 0.3s ease-out; 
+	-o-transition: all 0.3s ease-out; 
+	transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+		opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+		opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg {
+	opacity: 0;
+}

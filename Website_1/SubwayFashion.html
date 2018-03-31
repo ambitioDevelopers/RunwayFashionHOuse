@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    		<link rel="stylesheet" href="css/style.css">
+    		<link rel="stylesheet" href="css/font-awesome.min.css">
+    		<script type="text/javascript" src="js/zoom.js"></script>
+    <style>
+        
+/*        @import url('https://fonts.googleapis.com/css?family=Anton');*/
+        @import url('https://fonts.googleapis.com/css?family=Anton|Signika');
+
+
+        *{
+            margin: 0px;
+            padding:  0px;
+        }
+        
+        body{
+            background: #eee;
+        }
+
+        body {
+            font-family: 'Signika', sans-serif;
+            margin: 0px;
+            padding: 0px;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 300;
+            background: #000;
+            color: #fff;
+        }        
+        
+        
+        .logo {
+            float: left;
+            padding: 15px 0px 0px 0px;
+        }
+
+        .menu {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font: inherit;
+            vertical-align: baseline;
+        }        
+        
+        .toggleMenu {
+            display: none;
+            float: right;
+            margin: 20px 5px 0 0;
+        }
+
+        .header-fixed {
+            position: fixed;
+            top: 0%;
+            z-index: 9999;
+            width: 100%;
+            display: block;
+        }
+
+        .header-fixed-responsive {
+            position: fixed;
+            top: 0%;
+            z-index: 9999;
+            width: 100%;
+            display: block;
+            -webkit-box-shadow: 0px 6px 28px -19px rgba(0,0,0,0.98);
+            -moz-box-shadow: 0px 6px 28px -19px rgba(0,0,0,0.98);
+            box-shadow: 0px 6px 28px -19px rgba(0,0,0,0.98);
+        }
+
+        .nav {
+            list-style: none;
+            *zoom: 1;
+            position: relative;
+            float: right;
+        }
+
+            .nav:before, .nav:after {
+                content: " ";
+                display: table;
+            }
+
+            .nav:after {
+                clear: both;
+            }
+
+            .nav ul {
+                list-style: none;
+                width: 9em;
+            }
+
+            .nav a {
+                color: #5d5d5d;
+                color: #000;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+
+            .nav li {
+                float: left;
+                padding: 0px 0px;
+            }
+
+                .nav li a:hover, .nav li a.active {
+                    text-decoration: none;
+                    background-color: transparent;
+                    color: #fff;
+                    -webkit-transition: .3s all ease-in;
+                    -moz-transition: .3s all ease-in;
+                    -ms-transition: .3s all ease-in;
+                    -o-transition: .3s all ease-in;
+                }
+
+                .nav li a:focus {
+                    background-color: transparent;
+                }
+
+            .nav li {
+                position: relative;
+            }
+
+            .nav > li {
+                float: left;
+            }
+
+                .nav > li > .parent {
+                    background-image: url("images/downArrow.png");
+                    background-repeat: no-repeat;
+                    background-position: right;
+                }
+
+                .nav > li > a {
+                    display: block;
+                    padding: 24px 27px;
+                    color: #5d5d5d;
+                }
+
+            .nav li ul {
+                position: absolute;
+                left: -9999px;
+            }
+
+            .nav > li.hover > ul {
+                left: 0;
+            }
+
+            .nav li li.hover ul {
+                left: 100%;
+                top: 0;
+            }
+
+            .nav li li a {
+                display: block;
+                background: #5d5d5d;
+                position: relative;
+                z-index: 100;
+                border-top: 1px solid #175e4c;
+            }
+
+            .nav li li li a {
+                background: #249578;
+                z-index: 200;
+                border-top: 1px solid #1d7a62;
+            }
+
+        #navigation-menu a.mPS2id-highlight {
+            color: #fff;
+        }
+
+/*css for about section  */
+        
+.about {
+    margin-top: 250px;
+}        
+        
+.position-re {
+    position: relative;
+}        
+        
+.slider-bg {
+    background: url(/images/purple-bg.png);
+    background-position: 80% -15%;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    height: 600px;
+    padding-bottom: 150px;
+    margin: 150px 0 0 0px;
+}       
+
+.img-box {
+    float: left;
+    display: inline-block;
+    margin-top: -125px;
+    margin-left: 142px;
+    width: 25%;
+}        
+
+.img-box .position-re img, .next-overflow-img img {
+    width: 482px;
+}
+
+.img-responsive{
+    max-width: 100%;
+    display: block;
+    height: auto;
+}        
+
+.next-overflow-img {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    width: 482px;
+    height: 592px;
+}     
+        
+        
+.we-are-bg {
+    display: inline-block;
+    width: 55%;
+     float: right; 
+    text-align: justify;
+    margin-right: 60px;
+    z-index: 1;
+}
+        
+        .about-me-content {
+            padding: 250px 100px 0px 60px;
+            display: inline-block;
+        }
+        
+        .about-me-content .title {
+            font-family: 'Anton', sans-serif;
+            font-size: 155px;
+            line-height: 133px;
+            color: #fff;
+            font-weight: 100;
+            text-transform: uppercase;
+            display: inline-block;
+            padding-top: 35px;
+        }
+        
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+        .about-me-content p {
+            font-size: 15px;
+            line-height: 20px;
+            color: #b1a8b6;
+        }
+        
+        p{
+            margin: 0 0 10px;
+        }
+        
+        
+.clearfix {
+    *zoom: 1;
+}        
+        
+        
+    </style>
+
+</head>
+<body>
+    <section id="banner">
+       <div class="banner-inner">
+           <img src="images/banner.jpg" width="1349px" alt="">
+       </div>
+        
+    </section>
+
+    <header class="">
+            <div class="menu">
+                <div class="container">
+                    <div class="logo"><a href="#sec-1"><img src="images/logo.png" alt="Logo"></a> </div>
+                    <a class="toggleMenu" href="#" style="display: none;">
+                        <div id="nav-icon3"> <span></span> <span></span> <span></span> <span></span> </div>
+                    </a>
+                    <nav id="navigation-menu">
+                        <ul class="nav">
+                            <li class=""><a href="#sec-1" class="active">Home</a></li>
+                            <li class=""><a href="#sec-2" class="">About</a></li>
+                            <li class=""><a href="#sec-3" class="">Gallery</a></li>
+                            <li class=""><a href="#sec-4" class="">Designers</a></li>
+                            <li><a href="#sec-5">Gallery</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>    
+    
+    
+    <section>
+       <div class="about">
+            <div class="container">
+
+               <div class="slider-bg">
+
+                    <div class="img-box">
+                        <div class="position-re">
+                            <img src="images/about1.jpg" alt="About images" class="img-responsive">
+                            <div class="next-overflow-img">
+                                <img src="images/about2.jpg" alt="About images" class="img-responsive">
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>           
+
+                    <div class="we-are-bg">
+                        <div class="about-me-content">
+                            <div class="">
+                                <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rutrum consectetur neque, eu ullamcorper ligula finibus ac. Donec ut risus volutpat ex laoreet congue eu a dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rutrum consectetur neque, eu ullamcorper ligula finibus ac. Donec ut risus volutpat ex laoreet congue eu a dolor.<br>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rutrum consectetur neque, eu ullamcorper ligula finibus ac. Donec ut risus volutpat ex laoreet congue eu a dolor.
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rutrum consectetur neque, eu ullamcorper ligula finibus ac. Donec ut risus volutpat ex laoreet congue eu a dolor.</p>
+<!--                                <span class="title">We Are</span>-->
+                                <ul class="nospace contact linklist">
+                                    <li><i class="fa fa-map-marker"></i>
+                                        <address>
+                                          Company Name, Street Name &amp; Number, Town, Postcode/Zip
+                                        </address>
+                                    </li>
+                                    <li><i class="fa fa-mobile"></i> +00 (123) 456 7890</li>
+                                    <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
+                                </ul>                                
+                            </div>
+                        </div>
+                    </div>   
+               </div>
+            </div>           
+       </div>
+    </section>
+    
+    
+    
+    <section id="sec-4" class="designer">
+            <div class="design-bg-color">
+                <div class="container">
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="designer-bg"></div>
+            
+            <div class="grid zoom-gallery" style="position: relative; height: 316.782px;">
+                <div class="grid-item" style="position: absolute; left: 0px; bottom: 0px;">
+                    <a class="hoverZoomLink" href="images/pic-7.jpg">
+                        <img src="images/pic-7.jpg" alt="Gallery images" class="img-responsive">
+                    </a>
+                </div>
+                <div class="grid-item" style="position: absolute; left: 244px; bottom: 0px;">
+                    <a class="hoverZoomLink" href="images/pic-10.jpg">
+                        <img src="images/pic-10.jpg" alt="Gallery images" class="img-responsive">
+                    </a>
+                </div>
+                <div class="grid-item" style="position: absolute; left: 489px; bottom: 0px;">
+                    <a class="hoverZoomLink" href="images/pic-8.jpg">
+                        <img src="images/pic-8.jpg" alt="Gallery images" class="img-responsive">
+                    </a>
+                </div>
+                <div class="grid-item" style="position: absolute; left: 734px; bottom: 0px;">
+                    <a class="hoverZoomLink" href="images/pic-11.jpg">
+                        <img src="images/pic-11.jpg" alt="Gallery images" class="img-responsive">
+                    </a>
+                </div>
+                <div class="grid-item" style="position: absolute; left: 489px; bottom: 158px;">
+                    <a class="hoverZoomLink" href="images/pic-9.jpg">
+                        <img src="images/pic-9.jpg" alt="Gallery images" class="img-responsive">
+                    </a>
+                </div>
+            </div>            
+            
+    </section>    
+    
+</body>
+</html>
