@@ -47,7 +47,7 @@
     .design-bg-color:before {
         content: '';
         background-color: #d51d5d;
-        width: 63%;
+        width: 73%;
         position: absolute;
         left: 0;
         top: 0;
@@ -59,7 +59,7 @@
     z-index: -1;
     width: 89%;
     height: 384px;
-    top: -434px;
+    top: -900px;
     position: relative;
     bottom: -135px;
     float: right;
@@ -90,33 +90,47 @@
     display: inline-block;
 }
 
+/*sec 5*/
 
-
-/*Zoom CSS Start*/
-
-.image-source-link {
-	color: #98C3D1;
+.video-bg-color {
+    padding-top: 50px;
+    position: relative;
+    width: 100%;
 }
 
-.mfp-with-zoom .mfp-container,
-.mfp-with-zoom.mfp-bg {
-	opacity: 0;
-	-webkit-backface-visibility: hidden;
-	/* ideally, transition speed should match zoom duration */
-	-webkit-transition: all 0.3s ease-out; 
-	-moz-transition: all 0.3s ease-out; 
-	-o-transition: all 0.3s ease-out; 
-	transition: all 0.3s ease-out;
+    .video-bg-color:before {
+        content: '';
+        background-color: #6666cc;
+        width: 63%;
+        position: absolute;
+        left: 37%;
+        top: 0;
+        height: 100%;
+        z-index: -1;
+    }
+
+.videoGallery .title {
+            font-family: 'Anton', sans-serif;
+            float: right;
+            
+/*            width: 500px;*/
+            font-size: 120px;
+            line-height: 0px;
+            color: #fff;
+            font-weight: 100;
+            text-transform: uppercase;
+/*            display: inline-block;*/
+            padding-top: 5px;
 }
 
-.mfp-with-zoom.mfp-ready .mfp-container {
-		opacity: 1;
-}
-.mfp-with-zoom.mfp-ready.mfp-bg {
-		opacity: 0.8;
-}
-
-.mfp-with-zoom.mfp-removing .mfp-container, 
-.mfp-with-zoom.mfp-removing.mfp-bg {
-	opacity: 0;
+.videoGallery h3{
+    font-family: 'Anton', sans-serif;
+    font-size: 100px;
+    line-height: 100px;
+    font-weight: 100;
+    float: right;
+    margin-right: 150px;
+    width: 350px;
+    text-transform: uppercase;
+    color: #fff;    
 }
