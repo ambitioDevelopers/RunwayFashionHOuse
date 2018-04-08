@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/magnific.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/magnific.js"></script>
+    <script type="text/javascript" src="js/zoom.js"></script>
+
+    <style>
+        /*        @import url('https://fonts.googleapis.com/css?family=Anton');*/
+
+        @import url('https://fonts.googleapis.com/css?family=Anton|Signika');
+
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background: #eee;
+        }
+
+        body {
+            font-family: 'Signika', sans-serif;
+            margin: 0px;
+            padding: 0px;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 300;
+            background: #000;
+            color: #fff;
+        }
+
+
+        .logo {
+            float: left;
+            padding: 15px 0px 0px 0px;
+        }
+
+        .menu {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        .toggleMenu {
+            display: none;
+            float: right;
+            margin: 20px 5px 0 0;
+        }
+
+        .header-fixed {
+            position: fixed;
+            top: 0%;
+            z-index: 9999;
+            width: 100%;
+            display: block;
+        }
+
+        .header-fixed-responsive {
+            position: fixed;
+            top: 0%;
+            z-index: 9999;
+            width: 100%;
+            display: block;
+            -webkit-box-shadow: 0px 6px 28px -19px rgba(0, 0, 0, 0.98);
+            -moz-box-shadow: 0px 6px 28px -19px rgba(0, 0, 0, 0.98);
+            box-shadow: 0px 6px 28px -19px rgba(0, 0, 0, 0.98);
+        }
+
+        .nav {
+            list-style: none;
+            *zoom: 1;
+            position: relative;
+            float: right;
+        }
+
+        .nav:before,
+        .nav:after {
+            content: " ";
+            display: table;
+        }
+
+        .nav:after {
+            clear: both;
+        }
+
+        .nav ul {
+            list-style: none;
+            width: 9em;
+        }
+
+        .nav a {
+            color: #5d5d5d;
+            color: #000;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .nav li {
+            float: left;
+            padding: 0px 0px;
+        }
+
+        .nav li a:hover,
+        .nav li a.active {
+            text-decoration: none;
+            background-color: transparent;
+            color: #fff;
+            -webkit-transition: .3s all ease-in;
+            -moz-transition: .3s all ease-in;
+            -ms-transition: .3s all ease-in;
+            -o-transition: .3s all ease-in;
+        }
+
+        .nav li a:focus {
+            background-color: transparent;
+        }
+
+        .nav li {
+            position: relative;
+        }
+
+        .nav>li {
+            float: left;
+        }
+
+        .nav>li>.parent {
+            background-image: url("images/downArrow.png");
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+
+        .nav>li>a {
+            display: block;
+            padding: 24px 27px;
+            color: #5d5d5d;
+        }
+
+        .nav li ul {
+            position: absolute;
+            left: -9999px;
+        }
+
+        .nav>li.hover>ul {
+            left: 0;
+        }
+
+        .nav li li.hover ul {
+            left: 100%;
+            top: 0;
+        }
+
+        .nav li li a {
+            display: block;
+            background: #5d5d5d;
+            position: relative;
+            z-index: 100;
+            border-top: 1px solid #175e4c;
+        }
+
+        .nav li li li a {
+            background: #249578;
+            z-index: 200;
+            border-top: 1px solid #1d7a62;
+        }
+
+        #navigation-menu a.mPS2id-highlight {
+            color: #fff;
+        }
+
+        /*css for about section  */
+
+        .about {
+            margin-top: 250px;
+        }
+
+        .position-re {
+            position: relative;
+        }
+
+        .slider-bg {
+            background: url(/images/purple-bg.png);
+            background-position: 80% -15%;
+            background-repeat: no-repeat;
+            background-size: 50%;
+            height: 600px;
+            padding-bottom: 150px;
+            margin: 150px 0 0 0px;
+        }
+
+        .img-box {
+            float: left;
+            display: inline-block;
+            margin-top: -125px;
+            margin-left: 142px;
+            width: 25%;
+        }
+
+        .img-box .position-re img,
+        .next-overflow-img img {
+            width: 482px;
+        }
+
+        .img-responsive {
+            max-width: 100%;
+            display: block;
+            height: auto;
+        }
+
+        .next-overflow-img {
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            width: 482px;
+            height: 592px;
+        }
+
+
+        .we-are-bg {
+            display: inline-block;
+            width: 55%;
+            float: right;
+            text-align: justify;
+            margin-right: 60px;
+            z-index: 1;
+        }
+
+        .about-me-content {
+            padding: 250px 100px 0px 60px;
+            display: inline-block;
+        }
+
+        .about-me-content .title {
+            font-family: 'Anton', sans-serif;
+            font-size: 120px;
+            line-height: 100px;
+            color: #fff;
+            font-weight: 100;
+            text-transform: uppercase;
+            display: inline-block;
+            padding-top: 35px;
+        }
+
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .about-me-content p {
+            font-size: 15px;
+            line-height: 20px;
+            color: #b1a8b6;
+        }
+
+        p {
+            margin: 0 0 10px;
+        }
+
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+
+
+        .designer .title {
+            font-family: 'Anton', sans-serif;
+            font-size: 120px;
+            line-height: 100px;
+            color: #fff;
+            font-weight: 100;
+            text-transform: uppercase;
+            display: inline-block;
+            padding-top: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section id="banner">
+        <div class="banner-inner">
+            <img src="images/banner.jpg" width="1339px" alt="">
+        </div>
+
+    </section>
+
+    <header class="">
+        <div class="menu">
+            <div class="container">
+                <div class="logo">
+                    <a href="#sec-1">
+                        <img src="images/logo.png" alt="Logo">
+                    </a>
+                </div>
+                <a class="toggleMenu" href="#" style="display: none;">
+                    <div id="nav-icon3">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+                <nav id="navigation-menu">
+                    <ul class="nav">
+                        <li class="">
+                            <a href="#sec-1" class="active">Home</a>
+                        </li>
+                        <li class="">
+                            <a href="#sec-2" class="">About</a>
+                        </li>
+                        <li class="">
+                            <a href="#sec-3" class="">Gallery</a>
+                        </li>
+                        <li class="">
+                            <a href="#sec-4" class="">Designers</a>
+                        </li>
+                        <li>
+                            <a href="#sec-5">Gallery</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <section>
+        <div class="about">
+            <div class="container">
+
+                <div class="slider-bg">
+
+                    <div class="img-box">
+                        <div class="position-re">
+                            <img src="images/about1.jpg" alt="About images" class="img-responsive">
+                            <div class="next-overflow-img">
+                                <img src="images/about2.jpg" alt="About images" class="img-responsive">
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="we-are-bg">
+                        <div class="about-me-content">
+                            <div class="">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rutrum consectetur neque, eu ullamcorper ligula finibus ac.
+                                    Donec ut risus volutpat ex laoreet congue eu a dolor.Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Nunc rutrum consectetur neque, eu ullamcorper ligula finibus ac. Donec
+                                    ut risus volutpat ex laoreet congue eu a dolor.
+                                    <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rutrum consectetur neque,
+                                    eu ullamcorper ligula finibus ac. Donec ut risus volutpat ex laoreet congue eu a dolor.
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rutrum consectetur neque, eu
+                                    ullamcorper ligula finibus ac. Donec ut risus volutpat ex laoreet congue eu a dolor.</p>
+                                <span class="title">We Are At</span>
+                                <ul class="nospace contact linklist">
+                                    <li>
+                                        <i class="fa fa-map-marker"></i>
+                                        <address>
+                                            Company Name, Street Name &amp; Number, Town, Postcode/Zip
+                                        </address>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-mobile"></i> +00 (123) 456 7890</li>
+                                    <li>
+                                        <i class="fa fa-envelope-o"></i> info@domain.com</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="sec-4" class="designer">
+        <div class="design-bg-color">
+            <!--               <div class="slider-bg2"></div>-->
+            <div class="container">
+                <span class="title">Gallery</span>
+                <!--
+                    <div class="imageGallery">
+                   
+                        <a class="image-popup-no-margins" href="images/pic-7.jpg">
+                            <img src="images/pic-7.jpg" height="350">
+                        </a> 
+
+                        <a class="image-popup-no-margins" href="images/pic-8.jpg">
+                            <img src="images/pic-8.jpg" height="200">
+                        </a>
+                        
+                        <a class="image-popup-no-margins" href="images/pic-9.jpg">
+                            <img src="images/pic-9.jpg" height="200">
+                        </a>
+                        
+                        <a class="image-popup-no-margins" href="images/pic-10.jpg">
+                            <img src="images/pic-10.jpg" width="350">
+                        </a>                        
+                    </div>
+-->
+
+                <div class="grid" style="position: relative; height: 431.906px;">
+                    <div class="grid-item" style="position: absolute; left: 60px; bottom: 0px;">
+                        <a class="image-popup-no-margins" href="images/pic-7.jpg">
+                            <img src="images/pic-7.jpg" height="400">
+                        </a>
+                    </div>
+                    <div class="grid-item" style="position: absolute; left: 380px; bottom: 285px;">
+                        <a class="image-popup-no-margins" href="images/pic-8.jpg">
+                            <img src="images/pic-8.jpg" height="235">
+                        </a>
+                    </div>
+                    <div class="grid-item" style="position: absolute; left: 570px; bottom: 285px;">
+                        <a class="image-popup-no-margins" href="images/pic-9.jpg">
+                            <img src="images/pic-9.jpg" height="235">
+                        </a>
+                    </div>
+                    <div class="grid-item" style="position: absolute; left: 380px; bottom: 0px;">
+                        <a class="image-popup-no-margins" href="images/pic-10.jpg">
+                            <img src="images/pic-10.jpg" width="345">
+                        </a>
+                    </div>
+                    <div class="grid-item" style="position: absolute; left: 780px; bottom: 0px;">
+                        <a class="image-popup-no-margins" href="images/pic-12.jpg">
+                            <img src="images/pic-12.jpg" height="450">
+                        </a>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="designer-bg"></div>
+
+
+    </section>
+
+    <section id="sec-5" class="videoGallery">
+        <div class="video-bg-color">
+            <div class="container">
+                <div class="grid" style="position: relative; height: 150px;">
+                    <div class="grid-item" style="position: absolute; left: 80px; bottom: 0px;">
+                        <iframe class="image-popup-no-margins" width="640" height="420" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                            <img src="images/pic-10.jpg" width="345">
+                        </iframe>
+                    </div>
+                    <div class="grid-item" style="position: absolute; left: 750px; bottom: 0px;">
+                        <h3>Glimpse of fashion event</h3>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec-6" class="events">
+        <div class="events-bg-color">
+            <div class="container">
+                <div class="grid" style="position: relative; height: 820px;">
+                    <div class="grid-item" style="position: absolute; left: 150px; bottom: 0px;">
+
+                        <div class="wrapper">
+                            <div class="one">
+                                <div>
+                                    <div>
+                                        <h4>Glimpse of cinema style</h4>
+                                    </div>
+                                    <div>
+                                        <img src="images/box2.jpg" alt="box2" width="250">
+
+                                        <div class="dg-social">
+                                            <a href="#" class="fb-icon" target="_blank">
+                                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                            </a>
+                                            <a href="#" class="twitter-icon" target="_blank">
+                                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                            </a>
+                                            <a href="#" class="linkedin-icon" target="_blank">
+                                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>12 March 2018</h3>
+                        <span>Marc Jacobs</span>
+                    </div>
+                </div>
+
+                <div class="grid" style="position: relative; height: 0px;">
+
+                    <div class="grid-item" style="position: absolute; left: 500px; bottom: 130px;">
+                        <div class="wrapper">
+                            <div class="two">
+                                <div>
+                                    <h4>Ethinic Mens Wear</h4>
+                                    <img src="images/box2.jpg" alt="box2" width="250">
+
+                                    <div class="dg-social">
+                                        <a href="#" class="fb-icon" target="_blank">
+                                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="#" class="twitter-icon" target="_blank">
+                                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="#" class="linkedin-icon" target="_blank">
+                                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <h3>12 March 2018</h3>
+                        <span>Marc Jacobs</span>
+                    </div>
+                </div>
+
+                <div class="grid" style="position: relative; height: 0px;">
+
+                    <div class="grid-item" style="position: absolute; left: 850px; bottom: 260px;">
+                        <div class="wrapper">
+                            <div class="three">
+                                <div>
+                                    <h4>Chic Women-Summer Collection</h4>
+                                    <img src="images/box2.jpg" alt="box2" width="250">
+
+                                    <div class="dg-social">
+                                        <a href="#" class="fb-icon" target="_blank">
+                                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="#" class="twitter-icon" target="_blank">
+                                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="#" class="linkedin-icon" target="_blank">
+                                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <h3>12 March 2018</h3>
+                        <span>Marc Jacobs</span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </section>
+
+    <section id="sec-7">
+        <div class="container">
+            <div class="heading">
+                <h3>Featured Clients</h3>
+            </div>
+            <div class="logoWrapper">
+                <div>
+                    <img src="images/logo/1.jpg" alt="">
+                </div>
+                <div>
+                    <img src="images/logo/2.jpg" alt="">
+                </div>
+                <div>
+                    <img src="images/logo/3.jpg" alt="">
+                </div>
+                <div>
+                    <img src="images/logo/4.jpg" alt="">
+                </div>
+                <div>
+                    <img src="images/logo/5.jpg" alt="">
+                </div>
+                <div>
+                    <img src="images/logo/6.jpg" alt="">
+                </div>
+                <div>
+                    <img src="images/logo/7.jpg" alt="">
+                </div>
+                <div>
+                    <img src="images/logo/8.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="sec-8">
+        <div class="contact-bg-color">
+            <div class="container">
+                <div class="contact">
+                    <p>Contact Us</p>
+                    <h3>Work With Us</h3>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-bg-color">
+            <div class="container">
+                <div class="form">
+                    <form id="contact" action="" method="post">
+                        <fieldset>
+                            <input placeholder="Name" type="text" tabindex="1" required autofocus>
+                        </fieldset>
+                        <fieldset>
+                            <input placeholder="Email Address" type="email" tabindex="2" required>
+                        </fieldset>
+                        <fieldset>
+                            <input placeholder="Phone Number" type="tel" tabindex="3" required>
+                        </fieldset>
+                        <fieldset>
+                            <input placeholder="Subject" type="text" tabindex="1" required>
+                        </fieldset>
+                        <fieldset>
+                            <textarea placeholder="Message" tabindex="5" required></textarea>
+                        </fieldset>
+                        <fieldset>
+                            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Send</button>
+                        </fieldset>
+                    </form>
+
+                </div>
+
+            </div>
+            <div class="container">
+                <div class="address">
+                    <div class="grid" style="position: relative; height: 60px;">
+                        <div class="grid-item" style="position: absolute; left: -50px; bottom: 0px;">
+                            <div>
+                                <h3>Office:</h3>
+                                <p>41 Dean Streat, Delhi, India</p>
+                            </div>
+                            <div>
+                                <h3>Phone:</h3>
+                                <p>+91 123-456-789</p>
+                            </div>
+                            <div>
+                                <h3>E-Mail:</h3>
+                                <p>lorem@ipsum.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <div class="copyright-bg-color">
+            <div class="container">
+                <div class="grid" style="position: relative; height: 40px;">
+                    <div class="grid-item" style="position: absolute; left: 0px; bottom: -350px;">
+                        <h4>CopyRight@ Ambitio Developers</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
